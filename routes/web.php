@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,10 @@ Route::get('test/detail', [TestController::class, 'detail']);
 Route::get('user/detail/{id}/{test}', [TestController::class, 'show']);
 Route::get('list_user',function () {
     return view('user.list_user');
+});
+
+Route::get('list_category', [ProductCategoryController::class, 'show']);
+
+Route::get('list_user_blade', function () {
+    return view("user.list_user_blade");
 });
