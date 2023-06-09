@@ -1,63 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>
-        @yield('title')
-    </title>
-    <style>
-        *{
-            box-sizing: border-box;
-        }
+    <title>Ogani | Template</title>
 
-        .header,.content,.nav,.footer,.sidebar {
-            font-size: 1.5rem;
-            padding: 3rem;
-        }
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
-        .header{
-            background: red;
-        }
-
-        .nav{
-            background: green;
-            
-        }
-
-        .sidebar{
-            background: yellow;
-        }
-        .content{
-            background: blue;
-        }
-        .footer{
-            background: purple;
-        }
-    </style>
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{ asset('client/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('client/css/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('client/css/elegant-icons.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('client/css/nice-select.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('client/css/jquery-ui.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('client/css/owl.carousel.min.css') }}" type="text/css"> 
+    <link rel="stylesheet" href="{{ asset('client/css/slicknav.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('client/css/style.css') }}" type="text/css">
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            @include('client.pages.header')
-            <div class="col-12 nav">
-                Navbar
-            </div> 
-            <div class="col-4 sidebar">
-                @section('sidebar')
-                    Sidebar
-                @show
-            </div>
-            <div class="col-8 content">
-                Content
-            </div>
-            @include('client.pages.footer')
-        </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    @include('client.pages.header')
+
+    @yield('content')
+
+    @include('client.pages.footer')    
+
+    <!-- Js Plugins -->
+    <script src="{{ asset('client/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('client/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('client/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('client/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('client/js/jquery.slicknav.js') }}"></script>
+    <script src="{{ asset('client/js/mixitup.min.js') }}"></script>
+    <script src="{{ asset('client/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('client/js/main.js') }}"></script>
+
+
+
 </body>
+
 </html>
