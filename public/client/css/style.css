@@ -3466,3 +3466,12 @@ ol {
 		font-size: 24px;
 	}
 }
+
+/* Dangnhap */
+.auth{
+	margin: 3rem 25rem;
+	text-align: center;
+	box-shadow: 0px 4px 13px -1px rgba(0,0,0,0.6);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
